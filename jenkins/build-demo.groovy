@@ -20,10 +20,10 @@ pipeline {
 
         stage("Publish SdkDemo") {
             steps {
-                sh "ssh ubuntu@${app_publish_host} 'mkdir -p /home/ubuntu/www/driver-sdk/${release_version}'" 
-                sh "scp sdkSample/build/outputs/apk/qa/release/demo-qa-release.apk ubuntu@${app_publish_host}:/home/ubuntu/www/driver-sdk/${release_version}/sdkSample-qa-release.apk"                
-                sh "scp sdkSample/build/outputs/apk/staging/release/demo-staging-release.apk ubuntu@${app_publish_host}:/home/ubuntu/www/driver-sdk/${release_version}/sdkSample-staging-release.apk" 
-                sh "scp sdkSample/build/outputs/apk/product/release/demo-product-release.apk ubuntu@${app_publish_host}:/home/ubuntu/www/driver-sdk/${release_version}/sdkSample-product-release.apk"      
+                sh "ssh ubuntu@${app_publish_host} 'mkdir -p /home/ubuntu/www/driver-sdk-sample/${release_version}'"
+                sh "scp sdkSample/build/outputs/apk/qa/release/sdkSample-qa-release.apk ubuntu@${app_publish_host}:/home/ubuntu/www/driver-sdk-sample/${release_version}/sdkSample-qa-release.apk"
+                sh "scp sdkSample/build/outputs/apk/staging/release/sdkSample-staging-release.apk ubuntu@${app_publish_host}:/home/ubuntu/www/driver-sdk-sample/${release_version}/sdkSample-staging-release.apk"
+                sh "scp sdkSample/build/outputs/apk/product/release/sdkSample-product-release.apk ubuntu@${app_publish_host}:/home/ubuntu/www/driver-sdk-sample/${release_version}/sdkSample-product-release.apk"
             }
         }
     }    
