@@ -8,7 +8,7 @@ pipeline {
     stages {    
         stage('SCM SDK') {
             steps {
-                git([url: 'git@github.com:alctclub/MDPSDKSample.git', branch: release_branch])              
+                git([url: 'https://github.com/alctclub/MDPSDKSample.git', branch: release_branch])
             }                            
         }        
   
